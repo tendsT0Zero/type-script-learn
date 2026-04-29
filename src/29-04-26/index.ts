@@ -71,3 +71,10 @@ const response:ApiResponse<Student>={
 console.log(response);
 
 
+// Array
+
+let numbers:number[] =[1,2,3,4,5];
+let names:string[] = ["Nayeem", "John", "Doe"];
+let tupeles:[string,number,string,boolean] = ["Nayeem", 20, "A+", true];
+let mixedArray:(string|number|boolean)[] = ["Nayeem", 20, "A+", true, 123, "Hello"];
+
