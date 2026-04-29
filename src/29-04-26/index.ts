@@ -78,3 +78,85 @@ let names:string[] = ["Nayeem", "John", "Doe"];
 let tupeles:[string,number,string,boolean] = ["Nayeem", 20, "A+", true];
 let mixedArray:(string|number|boolean)[] = ["Nayeem", 20, "A+", true, 123, "Hello"];
 
+
+interface Profle{
+    professionalInfo:{
+        companyName:string,
+        position:string,
+        experience:number
+    },
+    personalInfo:{
+        name:string,
+        age:number,
+        hobbies:string[]
+    },
+    contactInfo:{
+        email:string,
+        phone:string
+    }
+
+}
+
+//array of Profile
+
+let profiles:Profle[]=[
+    {
+        professionalInfo:{
+            companyName:"Tech Company",
+            position:"Software Engineer",
+            experience:5
+        },
+        personalInfo:{
+            name:"Nayeem",
+            age:20,
+            hobbies:["Coding", "Gaming", "Traveling"]
+        },
+        contactInfo:{
+            email:"nayeem@example.com",
+            phone:"123-456-7890"
+        }
+
+    },
+    {
+        professionalInfo:{
+            companyName:"Another Tech Company",
+            position:"Senior Developer",
+            experience:8
+        },
+        personalInfo:{
+            name:"John Doe",
+            age:25,
+            hobbies:["Reading", "Swimming", "Cooking"]
+        },
+        contactInfo:{
+            email:"johndoe@example.com",
+            phone:"098-765-4321"
+        }
+    },
+    {
+        professionalInfo:{
+            companyName:"Tech Startup",
+            position:"Frontend Developer",
+            experience:3
+        },
+        personalInfo:{
+            name:"Jane Smith",
+            age:22,
+            hobbies:["Designing", "Traveling", "Photography"]
+        },
+        contactInfo:{
+            email:"janesmith@example.com",
+            phone:"555-123-4567"
+        }
+    }
+]
+
+
+//Filter() in TypeScript
+// filter the profile whose habbit is Designing
+
+const designerProfiles=profiles.filter(
+    (profile)=>profile.personalInfo.hobbies.includes("Designing")
+)
+
+console.log(designerProfiles);
