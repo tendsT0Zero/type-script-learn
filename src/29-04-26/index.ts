@@ -160,3 +160,14 @@ const designerProfiles=profiles.filter(
 )
 
 console.log(designerProfiles);
+
+//Map in TypeScript
+// map the profile to get the name and company name
+
+const profileNamesAndCompanies=profiles.map(
+    (profile)=>({
+        name:profile.personalInfo.name,
+        company:profile.professionalInfo.companyName
+    })
+)
+console.log(profileNamesAndCompanies);
