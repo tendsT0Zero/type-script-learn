@@ -45,3 +45,29 @@ let student:Student={
     console.log(`Welcome, ${name}!`);
   }
 }
+
+
+//Generics in TypeScript
+// Generics in TypeScript allow you to create reusable components that 
+// can work with a variety of data types. 
+// They provide a way to define functions, classes, or interfaces that
+//  can operate on different types while maintaining type safety. 
+// By using generics, you can write code that is flexible and adaptable
+//  to different data structures without sacrificing type checking.
+
+interface ApiResponse<T>{
+    data:T,
+    status:number,
+    message:string
+}
+
+
+const response:ApiResponse<Student>={
+    data: student,
+    status: 200,
+    message: "Success"
+}
+
+console.log(response);
+
+
