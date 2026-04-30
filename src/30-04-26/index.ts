@@ -1,3 +1,5 @@
+
+
 // Methods in Interface
 
 interface Person {
@@ -16,3 +18,22 @@ let person: Person = {
   },
 };
 person.greet();
+
+// Optional properties
+
+interface Car {
+  make: string;
+  model: string;
+  year?: number; // Optional property
+}
+
+let car1: Car = {
+  make: "Toyota",
+  model: "Camry",
+};
+
+let car2: Car = {
+  make: "Honda",
+  model: "Civic",
+  year: 2020,
+};
