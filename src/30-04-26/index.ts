@@ -1,5 +1,3 @@
-
-
 // Methods in Interface
 
 interface Person {
@@ -37,3 +35,16 @@ let car2: Car = {
   model: "Civic",
   year: 2020,
 };
+
+// Readonly properties
+
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+let point: Point = {
+  x: 10,
+  y: 20,
+};
+
+//point.x=40; // Error: Cannot assign to 'x' because it is a read-only property.
